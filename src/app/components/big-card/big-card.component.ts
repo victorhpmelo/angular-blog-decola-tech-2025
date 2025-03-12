@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-big-card',
@@ -7,10 +8,17 @@ import { Component, Input } from '@angular/core';
   styleUrl: './big-card.component.css'
 })
 export class BigCardComponent {
+   dataFake(n:number){
+    return dataFake[n];
+  }
+
+  
   @Input()
   photoCover:string = "";
   @Input()
-  cardTitle:string = "";
+  cardTitle:string ='';
   @Input()
-  cardDescription:string = "";
+  cardDescription:string ='';
+  @Input()
+  Id:string = "0";
 }
